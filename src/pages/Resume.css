@@ -1,0 +1,21 @@
+/* Ensure the container and pages are displayed in block layout (stacked vertically) */
+
+.resume-scrollable {
+    height: 100vh;                /* Full height of viewport */
+    overflow-y: auto;             /* Allow vertical scrolling */
+    padding: 20px;                /* Add padding */
+    display: block;               /* Ensure block layout, not flex */
+  }
+  
+  .resume-page {
+    margin-bottom: 20px;          /* Spacing between pages */
+    display: block;               /* Ensure each page is displayed as block */
+  }
+  
+  .resume-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
