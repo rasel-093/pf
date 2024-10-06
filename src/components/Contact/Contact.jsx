@@ -87,7 +87,7 @@ const Contact = () => {
                 <textarea name="message" className="user" placeholder="Message" onChange={handleChange} />
                 <span className='not-done' >{notDone && "Please, fill all the input field"}</span>
                 <Button type="submit" className="button" disabled={done}>Send</Button>
-                <span className='done'>{done && "Thanks for contacting me and be sure i have recieved your mail."}</span>
+                <span className='done'>{done && "Thanks for contacting me and be sure I have recieved your mail."}</span>
                 </form>
             </Col>
             </Row>
