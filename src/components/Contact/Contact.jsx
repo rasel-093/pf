@@ -16,33 +16,61 @@ const Contact = () => {
         setNotDone(false)
     }
 
-    const sendEmail = (e) => {
-    e.preventDefault();
+    // const sendEmail = (e) => {
+    // e.preventDefault();
     
-    if(!formData.from_name || !formData.reply_to ||!formData.message){
-      setNotDone(true)
-    } else {
+    // if(!formData.from_name || !formData.reply_to ||!formData.message){
+    //   setNotDone(true)
+    // } else {
       
-      //  Please use your own credentials from emailjs or i will recive your email
+    //   //  Please use your own credentials from emailjs or i will recive your email
       
-    emailjs
-      .sendForm(
-        "service_niilndo",
-        "template_6z5idye",
-        form.current,
-        "VOBt6Akm1LhI5CZG-"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setDone(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    }
-    };
+    // emailjs
+    //   .sendForm(
+    //     "service_eyklly9", //Service Id
+    //     "template_2ac0938", //Template Id
+    //     form.current,
+    //     "DEuj5opUNrULZSOqi"
+    //     //"VOBt6Akm1LhI5CZG-" //User Id //Public key
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //       setDone(true);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
+    // }
+    // };
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+    
+      if (!formData.from_name || !formData.reply_to || !formData.message) {
+        setNotDone(true);
+      } else {
+        emailjs
+          .sendForm(
+            "service_eyklly9", // Service ID
+            "template_2ac0938", // Template ID
+            form.current,
+            "DEuj5opUNrULZSOqi" // Public Key (User ID)
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              setDone(true);
+              setFormData({});  // Clear form data state
+              form.current.reset();  // Reset the form fields
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+      }
+    };    
     
 
     return(
@@ -59,7 +87,7 @@ const Contact = () => {
                 <textarea name="message" className="user" placeholder="Message" onChange={handleChange} />
                 <span className='not-done' >{notDone && "Please, fill all the input field"}</span>
                 <Button type="submit" className="button" disabled={done}>Send</Button>
-                <span className='done'>{done && "Thanks for contacting me and be sure i have recieved your mail. If you are testing this functionality then i am confirming this thing working perfectly fine. If you have any serious query then i will reply. Also if you need me, you can conatct me on Linkedin."}</span>
+                <span className='done'>{done && "Thanks for contacting me and be sure i have recieved your mail."}</span>
                 </form>
             </Col>
             </Row>

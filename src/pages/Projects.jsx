@@ -3,10 +3,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/Projects/ProjectCard";
 import Particle from "../components/Particle";
 import pg from "../assets/projects/pg.png";
-import project from "../assets/projects/project.jpeg";
-import lift from "../assets/projects/lift.png";
 import krypto from "../assets/projects/krypto.png";
 import kickstart from "../assets/projects/kickstart.png";
+import todoapp from "../assets/projects/todoapp.jpg";
+import money_management from "../assets/projects/money_management.png";
+import landmark_recognition from "../assets/projects/landmark_recognition.jpg";
+
 
 const Projects = () => {
   return (
@@ -22,31 +24,31 @@ const Projects = () => {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={lift}
+              imgPath={todoapp}
               isBlog={false}
-              title="Lift-Buddy"
-              description="This online ride-sharing platform boasts a responsive front-end design, complete with an admin panel built using React and Material-UI. With the integration of Google Maps API, users can easily access directions on the map. The platform allows for full CURD functionality on profiles and posts, and users can confirm or cancel a ride from a post and message each other after confirmation. Additionally, users can easily reset their password. The back-end is powered by a Node Express server and utilizes MongoDB for the database management."
-              ghLink="https://github.com/19sajib/lift-buddy"
+              title="TodoApp"
+              description="TodoApp helps users manage tasks efficiently. It includes features to filter tasks by categories such as all, today, tomorrow, missed, and done. Users can add tasks with a specific date and time. Tasks can be easily deleted by swiping."
+              ghLink="https://github.com/rasel-093/TodoApp"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={project}
+              imgPath={money_management}
               isBlog={false}
-              title="Social Media"
-              description="This platform features a responsive interface built with Reactjs and CSS, allowing users to easily manage their profiles and posts through CRUD activities. The option to follow other users and interact with their posts (like or dislike) is also available, with suggestions for new users to follow. Users can only view posts from their followed users and can only engage in chat with those they follow. The backend is powered by Nodejs and Expressjs server, while MongoDB is utilized as the database."
+              title="Money Management"
+              description="In Money Management app users can add transactions and select categories like Tea, Salary, Gift, and more. Transactions are grouped into Income and Expense, with income shown in black and expenses in red. The app also has an Overview tab with graphs and a Tips tab that offers tips based on monthly transactions."
               ghLink="https://github.com/19sajib/social-media"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={kickstart}
+              imgPath={landmark_recognition}
               isBlog={false}
-              title="E‑Commerce Website"
-              description="This ecommerce website utilizes a REST API built with Nodejs and Expressjs, allowing for easy CRUD operations on user profiles, products and admin panel. The user interface is designed for efficient product management and includes a complete purchase process. The admin panel, accessible for CRUD on users and products, includes a chart for statistics display. Stripe API is integrated to handle customer payments. The website uses MongoDB and Firebase as the database."
-              ghLink="https://github.com/19sajib/mern-stack-ecommerce"
+              title="Landmark Recognition"
+              description="app that recognizes landmarks using a machine learning model. Users can take a photo, and the app identifies the landmark."
+              ghLink="https://github.com/rasel-093/LandMark_RecogNition"
             />
           </Col>
 
