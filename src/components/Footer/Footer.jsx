@@ -36,7 +36,7 @@ const Footer = () => {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/19sajib"
+                  href="https://x.com/rasel_093"
                   style={{ color: "white" }}
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://leetcode.com/19sajib/"
+                  href="https://leetcode.com/rasel-093/"
                   style={{ color: "white" }}
                   target="_blank" 
                   rel="noopener noreferrer"

@@ -32,7 +32,7 @@ const Social = () => {
                   </li>
                   <li className="contact-icons">
                     <a
-                      href="https://twitter.com/19sajib"
+                      href="https://x.com/rasel_093"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-color  contact-social-icons"
@@ -52,7 +52,7 @@ const Social = () => {
                   </li>
                   <li className="contact-icons">
                     <a
-                      href="hhttps://leetcode.com/19sajib/"
+                      href="https://leetcode.com/rasel-093/"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-color contact-social-icons"
