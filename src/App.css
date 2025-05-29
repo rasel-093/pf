@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.project-card-view {
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card-view:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.project-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.yellow {
+  color: #f9c74f;
+}

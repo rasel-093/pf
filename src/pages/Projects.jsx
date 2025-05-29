@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/Projects/ProjectCard";
 import Particle from "../components/Particle";
@@ -7,61 +6,58 @@ import money_management from "../assets/projects/money_management.png";
 import landmark_recognition from "../assets/projects/landmark_recognition.jpg";
 import eventhub from "../assets/projects/eventhub.png";
 
-
 const Projects = () => {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-          Recent Top <strong className="yellow">Works </strong>
+        <h1 className="project-heading text-center mb-4">
+          Recent Top <strong className="yellow">Works</strong>
         </h1>
-        <p style={{ color: "white" }}>
+        <p className="text-center text-white mb-5">
           Here are a few projects I've worked on recently.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+        <Row className="g-4 justify-content-center">
+          <Col lg={4} md={4} sm={6} className="d-flex justify-content-center">
             <ProjectCard
               imgPath={eventhub}
               isBlog={false}
               title="EventHub"
-              description="EventHub is a platform for managing events, allowing users to create and manage events. It includes features for event creation, deletion, cost estimation and others management, making it easy for users to stay organized and connected."
+              description="A modern event management app where users can create events and add services. Providers can manage service requests and approve bookings."
               ghLink="https://github.com/rasel-093/EventHub"
             />
           </Col>
-          <Col md={4} className="project-card">
+          <Col lg={4} md={4} sm={6} className="d-flex justify-content-center">
             <ProjectCard
               imgPath={todoapp}
               isBlog={false}
               title="TodoApp"
-              description="TodoApp helps users manage tasks efficiently. It includes features to filter tasks by categories such as all, today, tomorrow, missed, and done. Users can add tasks with a specific date and time. Tasks can be easily deleted by swiping."
+              description="Helps users manage tasks efficiently with filter options like today, tomorrow, missed, and done. Swipe to delete tasks."
               ghLink="https://github.com/rasel-093/TodoApp"
             />
           </Col>
-
-          <Col md={4} className="project-card">
+          <Col lg={4} md={4} sm={6} className="d-flex justify-content-center">
             <ProjectCard
               imgPath={money_management}
               isBlog={false}
               title="Money Management"
-              description="In Money Management app users can add transactions and select categories like Tea, Salary, Gift, and more. Transactions are grouped into Income and Expense, with income shown in black and expenses in red. The app also has an Overview tab with graphs and a Tips tab that offers tips based on monthly transactions."
+              description="Track income and expenses, visualize spending with Pie & Bar charts, and receive personalized saving tips."
               ghLink="https://github.com/rasel-093/Money_Management1"
             />
           </Col>
-
-          <Col md={4} className="project-card">
+          <Col lg={4} md={4} sm={6} className="d-flex justify-content-center">
             <ProjectCard
               imgPath={landmark_recognition}
               isBlog={false}
               title="Landmark Recognition"
-              description="app that recognizes landmarks using a machine learning model. Users can take a photo, and the app identifies the landmark."
+              description="A landmark identification app using a trained ML model. Snap a picture to detect the landmark in real-time."
               ghLink="https://github.com/rasel-093/LandMark_RecogNition"
             />
           </Col>
         </Row>
       </Container>
     </Container>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
