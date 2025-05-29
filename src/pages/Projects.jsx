@@ -5,6 +5,8 @@ import todoapp from "../assets/projects/todoapp.jpg";
 import money_management from "../assets/projects/money_management.png";
 import landmark_recognition from "../assets/projects/landmark_recognition.jpg";
 import eventhub from "../assets/projects/eventhub.png";
+import counselling from "../assets/projects/counselling.png";
+
 
 const Projects = () => {
   return (
@@ -25,6 +27,15 @@ const Projects = () => {
               title="EventHub"
               description="A modern event management app where users can create events and add services. Providers can manage service requests and approve bookings."
               ghLink="https://github.com/rasel-093/EventHub"
+            />
+          </Col>
+          <Col lg={4} md={4} sm={6} className="d-flex justify-content-center">
+            <ProjectCard
+              imgPath={counselling}
+              isBlog={false}
+              title="Counselling"
+              description="Counseling App is a mental wellness tool offering breathing exercises, soothing audio, and motivational quotes to reduce stress."
+              ghLink="https://github.com/rasel-093/Counselling"
             />
           </Col>
           <Col lg={4} md={4} sm={6} className="d-flex justify-content-center">
